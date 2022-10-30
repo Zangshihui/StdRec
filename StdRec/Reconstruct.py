@@ -1,7 +1,7 @@
 import time
 import numpy as np
-from CosCalNL_multi.Fast import Fast
-from CosCalNL_multi.FastLoop_multi import FastLoop_multi
+from StdRec.Fast import Fast
+from StdRec.FastLoop_multi import FastLoop_multi
 
 class Reconstruct(Fast):
     def __init__(self, BoxSize = 1000, NMesh = 512, Omega_m0 = 0.3175, Hubble0 = 67.11, redshift = 0, RSD = False, *args, **kwargs):
@@ -31,10 +31,16 @@ class Reconstruct(Fast):
         self.Dis /= bias
         del temp
         
-    def StdRec(self):
+    def StdRec(self, bias, Filter):
         """
         Carry on standard reconstruction
         """
+        # Paint the catalog on the mesh using cic
+        self.Paint()
+        # Smooth the field
+        self.Gaussian_Window(Filter)
+        # Calculate the Displacement field
+        self.Zeldovich_Approx(bias = bias) 
         # Move the particles
         self.Position = FastLoop_multi.Shift_multi(self.Position.astype(np.float32), self.Dis.astype(np.float32), self.NMesh, self.BoxSize, self.Size)
         self.delta_d = FastLoop_multi.CICPaint_multi(self.Position, self.NMesh, self.BoxSize, self.Size) - 1
@@ -65,8 +71,3 @@ class Reconstruct(Fast):
         data *= self.d_ind
         del self.dn, self.d_ind
         return data
-        
-        
-        
-    
-   

@@ -1,6 +1,6 @@
 import h5py
 import numpy as np
-from CosCalNL_multi import readgadget, readfof
+from StdRec import readgadget, readfof
 
 class Base(object):
     def __init__(self, BoxSize = 1000, NMesh = 512, Omega_m0 = 0.3175, Hubble0 = 67.11, redshift = 0, RSD = False, *args, **kwargs):

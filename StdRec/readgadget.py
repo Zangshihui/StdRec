@@ -1,5 +1,5 @@
 import numpy as np
-from CosCalNL_multi import readsnap
+from StdRec import readsnap
 import sys,os,h5py
 
 # find snapshot name and format

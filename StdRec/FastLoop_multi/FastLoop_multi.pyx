@@ -11,6 +11,7 @@ cdef extern from "math.h":
     float fabs(float arg) nogil
 DTYPE = np.intc
 
+
 @cython.boundscheck(False) 
 @cython.wraparound(False)
 def CICPaint_multi(float[:, :] Position, int NMesh, int BoxSize, unsigned long int Size):
