@@ -981,7 +981,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "FastLoop_multi.pyx",
+  "StdRec/FastLoop_multi/FastLoop_multi.pyx",
   "stringsource",
 };
 /* NoFastGil.proto */
@@ -2154,7 +2154,6 @@ static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
 static const char __pyx_k_Position_new_view[] = "Position_new_view";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
-static const char __pyx_k_FastLoop_multi_pyx[] = "FastLoop_multi.pyx";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
@@ -2176,6 +2175,7 @@ static const char __pyx_k_Incompatible_checksums_0x_x_vs_0[] = "Incompatible che
 static const char __pyx_k_Indirect_dimensions_not_supporte[] = "Indirect dimensions not supported";
 static const char __pyx_k_Invalid_mode_expected_c_or_fortr[] = "Invalid mode, expected 'c' or 'fortran', got %s";
 static const char __pyx_k_Out_of_bounds_on_buffer_access_a[] = "Out of bounds on buffer access (axis %d)";
+static const char __pyx_k_StdRec_FastLoop_multi_FastLoop_m[] = "StdRec/FastLoop_multi/FastLoop_multi.pyx";
 static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to convert item to object";
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension %d (got %d and %d)";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
@@ -2196,7 +2196,6 @@ static PyObject *__pyx_n_s_DisInter;
 static PyObject *__pyx_n_s_Ellipsis;
 static PyObject *__pyx_kp_s_Empty_shape_tuple_for_cython_arr;
 static PyObject *__pyx_n_s_FastLoop_multi;
-static PyObject *__pyx_kp_s_FastLoop_multi_pyx;
 static PyObject *__pyx_n_s_Grid;
 static PyObject *__pyx_n_s_H;
 static PyObject *__pyx_n_s_H_view;
@@ -2231,6 +2230,7 @@ static PyObject *__pyx_n_s_Position_new_view;
 static PyObject *__pyx_n_s_Position_view;
 static PyObject *__pyx_n_s_Shift_multi;
 static PyObject *__pyx_n_s_Size;
+static PyObject *__pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m;
 static PyObject *__pyx_n_s_TempMemo;
 static PyObject *__pyx_n_s_Truncate;
 static PyObject *__pyx_n_s_TypeError;
@@ -20039,7 +20039,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Ellipsis, __pyx_k_Ellipsis, sizeof(__pyx_k_Ellipsis), 0, 0, 1, 1},
   {&__pyx_kp_s_Empty_shape_tuple_for_cython_arr, __pyx_k_Empty_shape_tuple_for_cython_arr, sizeof(__pyx_k_Empty_shape_tuple_for_cython_arr), 0, 0, 1, 0},
   {&__pyx_n_s_FastLoop_multi, __pyx_k_FastLoop_multi, sizeof(__pyx_k_FastLoop_multi), 0, 0, 1, 1},
-  {&__pyx_kp_s_FastLoop_multi_pyx, __pyx_k_FastLoop_multi_pyx, sizeof(__pyx_k_FastLoop_multi_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_Grid, __pyx_k_Grid, sizeof(__pyx_k_Grid), 0, 0, 1, 1},
   {&__pyx_n_s_H, __pyx_k_H, sizeof(__pyx_k_H), 0, 0, 1, 1},
   {&__pyx_n_s_H_view, __pyx_k_H_view, sizeof(__pyx_k_H_view), 0, 0, 1, 1},
@@ -20074,6 +20073,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Position_view, __pyx_k_Position_view, sizeof(__pyx_k_Position_view), 0, 0, 1, 1},
   {&__pyx_n_s_Shift_multi, __pyx_k_Shift_multi, sizeof(__pyx_k_Shift_multi), 0, 0, 1, 1},
   {&__pyx_n_s_Size, __pyx_k_Size, sizeof(__pyx_k_Size), 0, 0, 1, 1},
+  {&__pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m, __pyx_k_StdRec_FastLoop_multi_FastLoop_m, sizeof(__pyx_k_StdRec_FastLoop_multi_FastLoop_m), 0, 0, 1, 0},
   {&__pyx_n_s_TempMemo, __pyx_k_TempMemo, sizeof(__pyx_k_TempMemo), 0, 0, 1, 1},
   {&__pyx_n_s_Truncate, __pyx_k_Truncate, sizeof(__pyx_k_Truncate), 0, 0, 1, 1},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
@@ -20396,7 +20396,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__23 = PyTuple_Pack(24, __pyx_n_s_Position, __pyx_n_s_NMesh, __pyx_n_s_BoxSize, __pyx_n_s_Size, __pyx_n_s_H, __pyx_n_s_Output, __pyx_n_s_Output_view, __pyx_n_s_I, __pyx_n_s_J, __pyx_n_s_K, __pyx_n_s_I1, __pyx_n_s_J1, __pyx_n_s_K1, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_H_view, __pyx_n_s_k1, __pyx_n_s_k2, __pyx_n_s_k2_view, __pyx_n_s_N_view, __pyx_n_s_Np, __pyx_n_s_xp, __pyx_n_s_W, __pyx_n_s_TempMemo); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(4, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FastLoop_multi_pyx, __pyx_n_s_CICPaint_multi, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(4, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m, __pyx_n_s_CICPaint_multi, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 17, __pyx_L1_error)
 
   /* "FastLoop_multi.pyx":72
  * @cython.boundscheck(False)
@@ -20408,7 +20408,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(18, __pyx_n_s_Position, __pyx_n_s_Dis, __pyx_n_s_NMesh, __pyx_n_s_BoxSize, __pyx_n_s_Size, __pyx_n_s_H, __pyx_n_s_Position_new, __pyx_n_s_Position_new_view, __pyx_n_s_I, __pyx_n_s_J, __pyx_n_s_K, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_H_view, __pyx_n_s_k1, __pyx_n_s_N_view, __pyx_n_s_W, __pyx_n_s_Np); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(5, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FastLoop_multi_pyx, __pyx_n_s_Shift_multi, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(5, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m, __pyx_n_s_Shift_multi, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 72, __pyx_L1_error)
 
   /* "FastLoop_multi.pyx":123
  * @cython.boundscheck(False)
@@ -20420,7 +20420,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(24, __pyx_n_s_Position0, __pyx_n_s_Position, __pyx_n_s_Density, __pyx_n_s_NMesh, __pyx_n_s_BoxSize, __pyx_n_s_Size, __pyx_n_s_H, __pyx_n_s_Output, __pyx_n_s_Output_view, __pyx_n_s_I, __pyx_n_s_J, __pyx_n_s_K, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_H_view, __pyx_n_s_k1, __pyx_n_s_k2, __pyx_n_s_k2_view, __pyx_n_s_N_view, __pyx_n_s_Np, __pyx_n_s_xp, __pyx_n_s_W, __pyx_n_s_Delta, __pyx_n_s_IJK); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(6, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FastLoop_multi_pyx, __pyx_n_s_DisInter, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(6, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m, __pyx_n_s_DisInter, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 123, __pyx_L1_error)
 
   /* "FastLoop_multi.pyx":209
  * @cython.boundscheck(False)
@@ -20432,7 +20432,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__29 = PyTuple_Pack(9, __pyx_n_s_Input, __pyx_n_s_fn, __pyx_n_s_NMesh, __pyx_n_s_kmax, __pyx_n_s_k_ind, __pyx_n_s_k_ind_view, __pyx_n_s_I, __pyx_n_s_J, __pyx_n_s_K); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FastLoop_multi_pyx, __pyx_n_s_Truncate, 209, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m, __pyx_n_s_Truncate, 209, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 209, __pyx_L1_error)
 
   /* "FastLoop_multi.pyx":226
  * @cython.boundscheck(False)
@@ -20444,7 +20444,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__31 = PyTuple_Pack(8, __pyx_n_s_BoxSize, __pyx_n_s_NMesh, __pyx_n_s_Position, __pyx_n_s_H, __pyx_n_s_Position_view, __pyx_n_s_I, __pyx_n_s_J, __pyx_n_s_K); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FastLoop_multi_pyx, __pyx_n_s_Grid, 226, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_StdRec_FastLoop_multi_FastLoop_m, __pyx_n_s_Grid, 226, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 226, __pyx_L1_error)
 
   /* "View.MemoryView":287
  *         return self.name
