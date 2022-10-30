@@ -1,7 +1,7 @@
 import time
 import numpy as np
 from StdRec.Fast import Fast
-from StdRec.FastLoop_multi import FastLoop_multi
+import FastLoop_multi
 
 class Reconstruct(Fast):
     def __init__(self, BoxSize = 1000, NMesh = 512, Omega_m0 = 0.3175, Hubble0 = 67.11, redshift = 0, RSD = False, *args, **kwargs):
