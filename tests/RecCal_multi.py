@@ -12,8 +12,11 @@ def main():
     start = time.time()
     
     snapPATH = '/scratch/p/pen/zangsh/Quijote_Simulations/Snapshots/fiducial/0/snapdir_004/snap_004'
-    MyRec = Reconstruct(NMesh = NMesh, BoxSize = BoxSize, Omega_m0 = 0.3175, redshift = 0.5, RSD = False)
+    MyRec = Reconstruct(NMesh = NMesh, BoxSize = BoxSize, Omega_m0 = 0.3175, redshift = 0.5)
+    # Read the snapshot
     MyRec.Readsnapshots(snapPATH = snapPATH)
+    # Apply the RSD
+    MyRec.RSD(los = 2)
     
     # Generate the displacement field
     MyRec.StdRec(bias = bias, Filter = R)    
